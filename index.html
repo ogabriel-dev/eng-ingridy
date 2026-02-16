@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingridy Thamarys | Engenharia Civil</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header>
+      <a href="#home">
+        <img src="assets/png preto.png" class="logo" width="200px"
+      /></a>
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#regularizacao">Regularização</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <h1>Ingridy Thamarys</h1>
+      <h2>Projetos Arquitetônicos e Regularização de Imóveis</h2>
+      <p>
+        Engenharia civil especializada em regularização de imóveis e soluções
+        técnicas com segurança em Guapiara e região.
+      </p>
+      <a href="https://wa.me/5515996150701" class="btn" target="_blank">
+        <i
+          data-lucide="message-circle"
+          style="width: 18px; vertical-align: middle; margin-right: 8px"
+        ></i>
+        Fale comigo pelo WhatsApp
+      </a>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="services">
+      <h2>Serviços</h2>
+      <div class="cards">
+        <div class="card">
+          <i data-lucide="file-check-2" class="card-icon"></i>
+          <h3>Regularização de Imóveis</h3>
+          <p>Legalização de construções e processos junto à prefeitura.</p>
+        </div>
+        <div class="card">
+          <i data-lucide="pen-tool" class="card-icon"></i>
+          <h3>Projetos Arquitetônicos</h3>
+          <p>Projetos funcionais, estéticos e compatíveis com a realidade.</p>
+        </div>
+        <div class="card">
+          <i data-lucide="ruler" class="card-icon"></i>
+          <h3>Levantamentos</h3>
+          <p>Análise técnica para adequar construções às normas municipais.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGULARIZAÇÃO -->
+    <section id="regularizacao" class="section">
+      <h2><i data-lucide="clipboard-list"></i> Regularização de Imóveis</h2>
+      <p>Acompanhamento técnico essencial para legalizar seu imóvel.</p>
+      <ul class="icon-list">
+        <li>
+          <i data-lucide="check-circle-2"></i> Regularização de casas já
+          construídas
+        </li>
+        <li>
+          <i data-lucide="check-circle-2"></i> Aprovação junto à prefeitura
+        </li>
+        <li><i data-lucide="check-circle-2"></i> Atualização de projetos</li>
+      </ul>
+      <a href="https://wa.me/5515996150701" class="btn">Solicitar análise</a>
+    </section>
+
+    <section id="projetos" class="section gray">
+      <div class="section-content" style="text-align: center">
+        <h2><i data-lucide="layout"></i> Projetos Arquitetônicos</h2>
+        <p>Conheça alguns de nossos trabalhos realizados.</p>
+
+        <div class="gallery">
+          <img src="assets/1_1 - Photo.jpg" class="project-img" />
+          <img src="assets/2_1 - Photo.jpg" class="project-img" />
+          <img src="assets/2_4 - Photo.jpg" class="project-img" />
+        </div>
+
+        <button
+          class="btn-outline"
+          style="margin-top: 30px"
+          onclick="openGallery()"
+        >
+          Ver todos os projetos
+        </button>
+      </div>
+    </section>
+
+    <div id="galleryModal" class="modal">
+      <span class="btn-close-grid" onclick="closeGallery()">&times;</span>
+      <div class="modal-content">
+        <h3 style="margin-bottom: 30px">Portfólio Completo</h3>
+        <div class="full-gallery-grid">
+          <div
+            class="grid-item"
+            data-index="0"
+            style="background-image: url(&quot;assets/1_1 - Photo.jpg&quot;)"
+          ></div>
+          <div
+            class="grid-item"
+            data-index="1"
+            style="background-image: url(&quot;assets/2_1 - Photo.jpg&quot;)"
+          ></div>
+          <div
+            class="grid-item"
+            data-index="2"
+            style="background-image: url(&quot;assets/2_4 - Photo.jpg&quot;)"
+          ></div>
+          <div
+            class="grid-item"
+            data-index="3"
+            style="background-image: url(&quot;assets/outra_foto1.jpg&quot;)"
+          ></div>
+          <div
+            class="grid-item"
+            data-index="4"
+            style="background-image: url(&quot;assets/outra_foto2.jpg&quot;)"
+          ></div>
+          <div
+            class="grid-item"
+            data-index="5"
+            style="background-image: url(&quot;assets/outra_foto3.jpg&quot;)"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="viewer" class="viewer hidden">
+      <div class="viewer-container">
+        <span class="close-viewer" onclick="closeImageViewer()">&times;</span>
+
+        <img id="viewer-img" src="" alt="Projeto" />
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+      </div>
+    </div>
+
+    <section id="sobre" class="section sobre">
+      <h2>Sobre Ingridy Thamarys</h2>
+
+      <div class="sobre-container">
+        <div class="sobre-img">
+          <img src="assets/Ingridy-13.jpg" alt="Ingridy Thamarys" />
+        </div>
+
+        <div class="sobre-texto">
+          <p>
+            Sou engenheira civil, especialista em projetos arquitetônicos, com
+            atuação voltada à regularização de imóveis e desenvolvimento de
+            soluções técnicas seguras.
+          </p>
+          <p>
+            Busco sempre unir responsabilidade técnica, clareza nas orientações
+            e atenção às necessidades de cada cliente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section contact">
+      <h2>Entre em contato</h2>
+      <div class="contact-info">
+        <a href="https://www.instagram.com/eng_ingridy" target="_blank"
+          ><i data-lucide="instagram"></i> @eng_ingridy</a
+        >
+        <p><i data-lucide="phone"></i> (15) 99615-0701</p>
+        <p><i data-lucide="mail"></i> ingridythamarys@gmail.com</p>
+      </div>
+      <a href="https://wa.me/5515996150701" class="btn big" target="_blank"
+        >Falar no WhatsApp</a
+      >
+    </section>
+
+    <footer>
+      <p>© 2026 Ingridy Thamarys - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
