@@ -1,13 +1,10 @@
-// Inicializa ícones
 lucide.createIcons();
 
-// --- MENU MOBILE ---
 function toggleMenu() {
   const nav = document.getElementById("nav");
   nav.classList.toggle("active");
 }
 
-// Fechar menu ao clicar no mobile
 document.querySelectorAll("#nav a").forEach((link) => {
   link.addEventListener("click", () => {
     if (window.innerWidth <= 768) {
@@ -16,7 +13,6 @@ document.querySelectorAll("#nav a").forEach((link) => {
   });
 });
 
-// --- SCROLL SUAVE CORRIGIDO ---
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -37,13 +33,11 @@ document.querySelectorAll("nav a").forEach((anchor) => {
   });
 });
 
-// Funções para a Galeria Modal
 function openGallery() {
   const modal = document.getElementById("galleryModal");
   modal.style.display = "block";
-  document.body.style.overflow = "hidden"; // Trava o scroll do site ao abrir
+  document.body.style.overflow = "hidden";
 
-  // Animação de entrada rápida com GSAP
   gsap.from(".full-gallery-grid img", {
     duration: 0.5,
     scale: 0.8,
@@ -53,7 +47,6 @@ function openGallery() {
   });
 }
 
-// 1. Abrir/Fechar Modal da Galeria
 function openGallery() {
   document.getElementById("galleryModal").style.display = "block";
   document.body.style.overflow = "hidden";
@@ -64,7 +57,6 @@ function closeGallery() {
   document.body.style.overflow = "auto";
 }
 
-// 2. Lógica do Visualizador de Imagens
 const viewer = document.getElementById("viewer");
 const viewerImg = document.getElementById("viewer-img");
 const images = document.querySelectorAll(".grid-item");
@@ -97,7 +89,6 @@ document.querySelector(".close-viewer").addEventListener("click", () => {
   viewerImg.classList.remove("show");
 });
 
-// Navegação do Visualizador
 document.querySelector(".next-btn").addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % images.length;
   updateViewerImage();
@@ -108,7 +99,6 @@ document.querySelector(".prev-btn").addEventListener("click", () => {
   updateViewerImage();
 });
 
-// Atalhos de Teclado
 document.addEventListener("keydown", (e) => {
   if (!viewer.classList.contains("active")) return;
   if (e.key === "Escape") document.querySelector(".close-viewer").click();
@@ -121,7 +111,7 @@ function updateViewerImage() {
 
   setTimeout(() => {
     const bg = images[currentIndex].style.backgroundImage;
-    // Regex melhorada para pegar a URL independente de aspas
+
     const url = bg.replace(/^url\(["']?/, "").replace(/["']?\)$/, "");
     viewerImg.src = url;
   }, 250);
