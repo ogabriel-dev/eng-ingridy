@@ -84,13 +84,17 @@ section p {
     font-size: 1.1rem;
 }
 
+section .texto {
+    text-align: justify;
+}
+
 .hero {
     text-align: center;
     width: 100%;
     padding-top: 350px;
 
     background-image:
-        linear-gradient(rgba(243, 243, 243, 0.5), rgb(255 255 255)), url(assets/background-ingridy.jpeg);
+        linear-gradient(rgba(243, 243, 243, 0.5), rgb(255 255 255)), url(assets/Ingridy-Thamarys/ingridy-thamarys-background.jpeg);
 
     background-size: cover;
     background-position: center;
@@ -224,23 +228,6 @@ footer {
         display: block;
     }
 
-    /* 
-    .hero {
-        padding-top: 120px;
-        margin: 100px auto;
-
-        text-align: center;
-        padding: 180px 5% 100px;
-
-        background-image:
-            linear-gradient(rgba(243, 243, 243, 0.5), rgb(255 255 255)),
-            url(assets/background.jpg);
-
-        background-size: cover;
-        background-position: center;
-
-    } */
-
     .hero h2 {
         line-height: 27px;
     }
@@ -258,6 +245,8 @@ footer {
 .icon-list {
     list-style: none;
     margin: 25px 0;
+    text-align: left;
+
 }
 
 .icon-list li {
@@ -267,10 +256,13 @@ footer {
     margin-bottom: 12px;
 }
 
-.icon-list li i {
-    color: #10b981;
+.icon-list li svg {
     width: 20px;
+    height: 20px;
+    min-width: 20px;
+    flex-shrink: 0;
 }
+
 
 .contact {
     display: flex;
@@ -294,6 +286,7 @@ a {
     width: 20px;
     color: var(--text-main);
     align-items: center;
+
 }
 
 .btn {
@@ -304,7 +297,7 @@ a {
 
 .project-img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -338,6 +331,7 @@ a {
     min-width: 280px;
     line-height: 1.7;
     font-size: 1.1rem;
+    text-align: justify;
 }
 
 .btn-outline {
